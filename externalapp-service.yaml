@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: myexternalapp-loadbalancer
+  namespace: dev
+  labels:
+    app: myexternalapp
+    type: frontend
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 8085
+      targetPort: 8080
+  selector:
+      app: myexternalapp
