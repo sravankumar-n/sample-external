@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: external-containers
-          image: sharavankumar/external:3.0
+          image: sharavankumar/demotest:$BUILD_NUMBER
           imagePullPolicy: Always
   replicas: 2
   selector:
